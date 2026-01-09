@@ -55,8 +55,17 @@ class Order extends Model
      */
     public function calculateTotals(): void
     {
-        // Stand Fee: 100 * levels
-        $this->stand_fee = $this->stand_layers * 100;
+        // Stand Fee: 1 - 300, 2 - 500, 3+ - 800
+        $levels = (int) $this->stand_layers;
+        if ($levels === 1) {
+            $this->stand_fee = 300;
+        } elseif ($levels === 2) {
+            $this->stand_fee = 500;
+        } elseif ($levels >= 3) {
+            $this->stand_fee = 800;
+        } else {
+            $this->stand_fee = 0;
+        }
 
         // Fruit Add-ons: 100 each
         $fruitsCount = is_array($this->add_ons_fruits) ? count($this->add_ons_fruits) : 0;
@@ -66,11 +75,14 @@ class Order extends Model
         $decorCount = is_array($this->add_ons_decor) ? count($this->add_ons_decor) : 0;
         $decorFee = $decorCount * 200;
 
+        // Cake levels fee: levels * 100
+        $cakeLevelsFee = (int) $this->cake_levels * 100;
+
         // Base price: mass * price_per_kg
-        $basePrice = $this->product_mass * $this->price_per_kg;
+        $basePrice = (float) $this->product_mass * (float) $this->price_per_kg;
 
         // Total
-        $this->total_sum = $basePrice + $this->stand_fee + $fruitsFee + $decorFee + ($this->delivery_price ?? 0);
+        $this->total_sum = $basePrice + $this->stand_fee + $fruitsFee + $decorFee + $cakeLevelsFee + ($this->delivery_price ?? 0);
     }
 
     protected static function booted()

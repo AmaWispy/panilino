@@ -52,13 +52,19 @@ export const OrderEdit: React.FC<IResourceComponentsProps> = () => {
     const levels = Number(values.stand_layers) || 0;
     const fruits = values.add_ons_fruits || [];
     const decors = values.add_ons_decor || [];
+    const cakeLevels = Number(values.cake_levels) || 0;
 
-    const standFee = levels * 100;
+    let standFee = 0;
+    if (levels === 1) standFee = 300;
+    else if (levels === 2) standFee = 500;
+    else if (levels >= 3) standFee = 800;
+
     const fruitsFee = fruits.length * 100;
     const decorFee = decors.length * 200;
+    const cakeLevelsFee = cakeLevels * 100;
     const basePrice = mass * pricePerKg;
 
-    const total = basePrice + standFee + fruitsFee + decorFee + deliveryPrice;
+    const total = basePrice + standFee + fruitsFee + decorFee + cakeLevelsFee + deliveryPrice;
 
     form.setFieldsValue({ 
       stand_fee: standFee,

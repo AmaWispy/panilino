@@ -9,7 +9,7 @@ class OrderController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Order::with('client');
+        $query = Order::with('client')->latest();
 
         if ($request->has('q')) {
             $search = $request->get('q');
