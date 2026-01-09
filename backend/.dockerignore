@@ -1,0 +1,5 @@
+vendor
+storage/*.key
+.git
+.env
+Dockerfile
