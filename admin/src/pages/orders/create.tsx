@@ -15,7 +15,7 @@ export const OrderCreate: React.FC<IResourceComponentsProps> = () => {
     const formattedValues = {
       ...values,
       event_date: values.event_date?.format ? values.event_date.format("YYYY-MM-DD") : values.event_date,
-      production_end_time: values.production_end_time?.format ? values.production_end_time.format() : values.production_end_time,
+      production_end_time: values.production_end_time?.format ? values.production_end_time.format("YYYY-MM-DD HH:mm:ss") : values.production_end_time,
     };
     return formProps.onFinish?.(formattedValues);
   };
@@ -124,7 +124,7 @@ export const OrderCreate: React.FC<IResourceComponentsProps> = () => {
                 name="event_date"
                 rules={[{ required: true }]}
                 getValueProps={(value) => ({
-                  value: value ? dayjs(value) : undefined,
+                  value: value ? dayjs(value, "YYYY-MM-DD") : undefined,
                 })}
               >
                 <DatePicker style={{ width: "100%" }} />
@@ -154,7 +154,7 @@ export const OrderCreate: React.FC<IResourceComponentsProps> = () => {
             label="Production End Time"
             name="production_end_time"
             getValueProps={(value) => ({
-              value: value ? dayjs(value) : undefined,
+              value: value ? dayjs(value, "YYYY-MM-DD HH:mm:ss") : undefined,
             })}
           >
              <DatePicker showTime style={{ width: "100%" }} />
