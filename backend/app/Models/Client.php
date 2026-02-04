@@ -14,6 +14,16 @@ class Client extends Model
         'surname',
         'phone',
         'email',
+        'date_of_birth',
+        'wedding_date',
+        'children_birthdays',
+        'profession',
+        'notes',
+    ];
+
+    protected $casts = [
+        'date_of_birth' => 'date:Y-m-d',
+        'wedding_date' => 'date:Y-m-d',
     ];
 
     public function orders()

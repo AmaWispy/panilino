@@ -9,3 +9,29 @@ body {
 .ant-layout {
     min-height: 100vh;
 }
+
+@media print {
+    /* Hide layout elements */
+    .ant-layout-sider,
+    .ant-layout-header,
+    .ant-breadcrumb,
+    .ant-page-header-heading-extra,
+    .ant-btn {
+        display: none !important;
+    }
+
+    /* Reset layout margins for print */
+    .ant-layout-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Make sure the show card takes full width */
+    .ant-card {
+        border: none !important;
+    }
+
+    .ant-card-body {
+        padding: 0 !important;
+    }
+}

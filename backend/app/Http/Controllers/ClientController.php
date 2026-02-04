@@ -31,6 +31,11 @@ class ClientController extends Controller
             'surname' => 'required|string',
             'phone' => 'required|string',
             'email' => 'nullable|email',
+            'date_of_birth' => 'nullable|date',
+            'wedding_date' => 'nullable|date',
+            'children_birthdays' => 'nullable|string',
+            'profession' => 'nullable|string',
+            'notes' => 'nullable|string',
         ]);
 
         return Client::create($validated);
@@ -48,6 +53,11 @@ class ClientController extends Controller
             'surname' => 'sometimes|required|string',
             'phone' => 'sometimes|required|string',
             'email' => 'nullable|email',
+            'date_of_birth' => 'nullable|date',
+            'wedding_date' => 'nullable|date',
+            'children_birthdays' => 'nullable|string',
+            'profession' => 'nullable|string',
+            'notes' => 'nullable|string',
         ]);
 
         $client->update($validated);

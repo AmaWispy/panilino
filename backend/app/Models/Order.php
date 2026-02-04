@@ -11,9 +11,12 @@ class Order extends Model
 
     protected $fillable = [
         'client_id',
+        'additional_contacts',
+        'references',
         'event_type',
         'invited_count',
         'event_date',
+        'event_time',
         'delivery_address',
         'delivery_time',
         'delivery_price',
@@ -30,10 +33,14 @@ class Order extends Model
         'stand_layers',
         'stand_fee',
         'total_sum',
+        'advance_sum',
+        'deposit_sum',
         'status',
     ];
 
     protected $casts = [
+        'additional_contacts' => 'array',
+        'references' => 'array',
         'add_ons_fruits' => 'array',
         'add_ons_decor' => 'array',
         'event_date' => 'date:Y-m-d',
@@ -43,6 +50,8 @@ class Order extends Model
         'price_per_kg' => 'decimal:2',
         'stand_fee' => 'decimal:2',
         'total_sum' => 'decimal:2',
+        'advance_sum' => 'decimal:2',
+        'deposit_sum' => 'decimal:2',
     ];
 
     public function client()

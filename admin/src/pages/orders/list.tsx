@@ -9,8 +9,10 @@ import {
   DateField,
 } from "@refinedev/antd";
 import { Table, Space, Input, Tag } from "antd";
+import { useTranslation } from "react-i18next";
 
 export const OrderList: React.FC<IResourceComponentsProps> = () => {
+  const { t } = useTranslation();
   const { tableProps, searchFormProps } = useTable({
     syncWithLocation: true,
     onSearch: (values: any) => {
@@ -28,7 +30,7 @@ export const OrderList: React.FC<IResourceComponentsProps> = () => {
     <List>
       <div style={{ marginBottom: "16px" }}>
         <Input.Search
-          placeholder="Search by client name or event type"
+          placeholder={t("buttons.search") || "Search..."}
           onSearch={(value) => searchFormProps.onFinish({ q: value })}
           allowClear
           style={{ width: 300 }}
@@ -38,31 +40,31 @@ export const OrderList: React.FC<IResourceComponentsProps> = () => {
         <Table.Column dataIndex="id" title="ID" />
         <Table.Column
           dataIndex={["client", "name"]}
-          title="Client"
+          title={t("orders.fields.client")}
           render={(value, record: any) => `${record.client?.name} ${record.client?.surname}`}
         />
-        <Table.Column dataIndex="event_type" title="Event Type" />
+        <Table.Column dataIndex="event_type" title={t("orders.fields.event_type")} />
         <Table.Column
           dataIndex="event_date"
-          title="Event Date"
+          title={t("orders.fields.event_date")}
           render={(value) => <DateField value={value} format="YYYY-MM-DD" />}
         />
         <Table.Column
           dataIndex="total_sum"
-          title="Total Sum"
+          title={t("orders.fields.total_sum")}
           render={(value) => `${value} MDL`}
         />
         <Table.Column
           dataIndex="status"
-          title="Status"
+          title={t("orders.fields.status")}
           render={(value) => (
             <Tag color={value === "cancelled" ? "red" : "blue"}>
-              {value?.toUpperCase()}
+              {t(`options.statuses.${value}`)}
             </Tag>
           )}
         />
         <Table.Column
-          title="Actions"
+          title={t("buttons.actions")}
           dataIndex="actions"
           render={(_, record: BaseRecord) => (
             <Space>

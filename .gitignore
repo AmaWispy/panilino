@@ -1,0 +1,14 @@
+# Exclude .env files in the project root
+.env
+
+# Exclude .env files in subfolders
+**/*.env
+
+# Exclude volumes
+data/
+cron/
+
+# Exclude docker-compose
+docker-compose.yml
+docker-compose.local.yml
+docker-compose.prod.yml

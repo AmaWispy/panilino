@@ -1,0 +1,158 @@
+{
+  "orders": {
+    "orders": "Orders",
+    "titles": {
+      "list": "Orders",
+      "show": "Order Details",
+      "edit": "Edit Order",
+      "create": "Create Order"
+    },
+    "fields": {
+      "status": "Status",
+      "total_sum": "Total Sum",
+      "event_type": "Event Type",
+      "event_date": "Event Date",
+      "event_time": "Event Time",
+      "invited_count": "Invited Count",
+      "delivery_address": "Delivery Address",
+      "delivery_time": "Delivery Time",
+      "cake_shape": "Cake Shape",
+      "cake_levels": "Cake Levels",
+      "filling": "Filling",
+      "description_in_box": "Description in box",
+      "inscription": "Inscription",
+      "client": "Client",
+      "client_info": "Client Information",
+      "status_info": "Status",
+      "event_details": "Event Details",
+      "delivery_info": "Delivery Information",
+      "cake_specs": "Cake Specifications",
+      "stand_info": "Stand Information",
+      "production_end_time": "Production End Time",
+      "product_mass": "Product Mass (kg)",
+      "price_per_kg": "Price per kg",
+      "delivery_price": "Delivery Price",
+      "fruits_addons": "Fruits Add-ons",
+      "decor_addons": "Decor Add-ons",
+      "stand_levels": "Stand Levels",
+      "stand_fee": "Stand Fee",
+      "total_sum_calculated": "Total Sum (calculated)",
+      "add_new_client": "Add New Client",
+      "additional_contacts": "Additional contacts",
+      "contact_name": "Name",
+      "contact_phone": "Phone",
+      "add_contact": "Add contact",
+      "references": "References",
+      "references_comment": "Comment",
+      "add_reference": "Add photo",
+      "upload_reference": "Upload",
+      "delete_reference": "Delete",
+      "advance_sum": "Advance sum",
+      "deposit_sum": "Deposit sum"
+    },
+    "placeholders": {
+      "delivery_time": "e.g. 14:00"
+    }
+  },
+  "clients": {
+    "clients": "Clients",
+    "titles": {
+      "list": "Clients",
+      "show": "Client Details",
+      "edit": "Edit Client",
+      "create": "Create Client"
+    },
+    "fields": {
+      "name": "Name",
+      "surname": "Surname",
+      "phone": "Phone",
+      "email": "Email",
+      "date_of_birth": "Date of birth",
+      "wedding_date": "Wedding date",
+      "children_birthdays": "Children's birthdays",
+      "profession": "Profession",
+      "notes": "Notes"
+    }
+  },
+  "buttons": {
+    "print": "Print",
+    "save": "Save",
+    "cancel": "Cancel",
+    "create": "Create",
+    "edit": "Edit",
+    "show": "Show",
+    "delete": "Delete",
+    "search": "Search...",
+    "actions": "Actions"
+  },
+  "options": {
+    "event_types": {
+      "Wedding": "Wedding",
+      "Cumetrie": "Cumetrie",
+      "Birthday": "Birthday",
+      "Corporate Event": "Corporate Event",
+      "Other": "Other"
+    },
+    "cake_shapes": {
+      "Square": "Square",
+      "Round": "Round",
+      "Rectangular": "Rectangular",
+      "Triangular": "Triangular",
+      "Other models": "Other models"
+    },
+    "fillings": {
+      "Alb negru": "Black and White",
+      "Catifea roșie": "Red Velvet",
+      "Chichiță de seară": "Evening Trick",
+      "De casă": "Homemade",
+      "Diplomat": "Diplomat",
+      "Evantai": "Fan",
+      "Gingășie": "Tenderness",
+      "Lady ananas": "Lady Pineapple",
+      "Lady vișină": "Lady Cherry",
+      "Magie": "Magic",
+      "Nuvella": "Nuvella",
+      "Primăvara": "Spring",
+      "Prințul negru": "Black Prince",
+      "Sârbătoare": "Celebration",
+      "Smântânel": "Sour Cream",
+      "Șah-mat": "Checkmate",
+      "Tiramisu": "Tiramisu",
+      "Tradițional cu nuca": "Traditional with Walnut",
+      "Tradițional cu vișină": "Traditional with Cherry",
+      "Fetita de lapte": "Milk Girl",
+      "Praga - Catifea roșie": "Prague - Red Velvet",
+      "Cu morcov": "Carrot",
+      "Melancolie": "Melancholy",
+      "Fistic": "Pistachio",
+      "Alt continut": "Other content"
+    },
+    "fruit_addons": {
+      "Banana": "Banana",
+      "Cherry": "Cherry",
+      "Kiwi": "Kiwi",
+      "Pineapple": "Pineapple",
+      "Chickpea": "Chickpea"
+    },
+    "decor_addons": {
+      "Fruit": "Fruit",
+      "Sugar paste": "Sugar paste",
+      "Cream": "Cream"
+    },
+    "statuses": {
+      "inregistrata": "Registered",
+      "transmisa_catre_producere": "Sent to production",
+      "preluata_producere": "Accepted by production",
+      "in_lucru": "In progress",
+      "gata_de_livrare": "Ready for delivery",
+      "depozit_panilino": "Panilino warehouse",
+      "showroom": "Showroom",
+      "preluata_sofer": "Accepted by driver",
+      "livrata": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "stand_types": {
+      "Metal": "Metal"
+    }
+  }
+}

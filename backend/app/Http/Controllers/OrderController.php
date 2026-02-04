@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class OrderController extends Controller
 {
@@ -50,6 +51,55 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         $order->delete();
+        return response()->noContent();
+    }
+
+    /**
+     * Upload a reference photo with comment for an order.
+     */
+    public function uploadReference(Request $request, Order $order)
+    {
+        $request->validate([
+            'file' => 'required|file|mimes:jpeg,jpg,png,gif,webp|max:10240', // 10MB, only JPG/PNG/GIF/WebP
+            'comment' => 'nullable|string|max:1000',
+        ]);
+
+        $file = $request->file('file');
+        $comment = $request->input('comment', '');
+        $dir = 'order-references/' . $order->id;
+        $path = $file->store($dir, 'public');
+
+        $references = $order->references ?? [];
+        $references[] = ['path' => $path, 'comment' => $comment];
+        $order->references = $references;
+        $order->save();
+
+        return response()->json([
+            'path' => $path,
+            'comment' => $comment,
+            'url' => Storage::disk('public')->url($path),
+        ]);
+    }
+
+    /**
+     * Delete a reference by index and remove file from storage.
+     */
+    public function deleteReference(Order $order, int $index)
+    {
+        $references = $order->references ?? [];
+        if (!isset($references[$index])) {
+            return response()->json(['message' => 'Reference not found'], 404);
+        }
+
+        $ref = $references[$index];
+        if (!empty($ref['path']) && Storage::disk('public')->exists($ref['path'])) {
+            Storage::disk('public')->delete($ref['path']);
+        }
+
+        array_splice($references, $index, 1);
+        $order->references = $references;
+        $order->save();
+
         return response()->noContent();
     }
 }

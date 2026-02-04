@@ -1,0 +1,158 @@
+{
+  "orders": {
+    "orders": "Comenzi",
+    "titles": {
+      "list": "Comenzi",
+      "show": "Detalii Comandă",
+      "edit": "Editează Comanda",
+      "create": "Creează Comandă"
+    },
+    "fields": {
+      "status": "Status",
+      "total_sum": "Sumă Totală",
+      "event_type": "Tip Eveniment",
+      "event_date": "Data Eveniment",
+      "event_time": "Ora Eveniment",
+      "invited_count": "Număr Invitați",
+      "delivery_address": "Adresa de Livrare",
+      "delivery_time": "Ora de Livrare",
+      "cake_shape": "Forma Tortului",
+      "cake_levels": "Etaje Tort",
+      "filling": "Umplutură",
+      "description_in_box": "Descriere în cutie",
+      "inscription": "Inscripție",
+      "client": "Client",
+      "client_info": "Informații Client",
+      "status_info": "Status",
+      "event_details": "Detalii Eveniment",
+      "delivery_info": "Informații Livrare",
+      "cake_specs": "Specificații Tort",
+      "stand_info": "Informații Suport",
+      "production_end_time": "Ora Finalizare Producție",
+      "product_mass": "Masă Produs (kg)",
+      "price_per_kg": "Preț per kg",
+      "delivery_price": "Preț Livrare",
+      "fruits_addons": "Suplimente Fructe",
+      "decor_addons": "Suplimente Decor",
+      "stand_levels": "Nivele Suport",
+      "stand_fee": "Taxă Suport",
+      "total_sum_calculated": "Sumă Totală (calculată)",
+      "add_new_client": "Adaugă Client Nou",
+      "additional_contacts": "Contacte pentru legătură",
+      "contact_name": "Nume",
+      "contact_phone": "Telefon",
+      "add_contact": "Adaugă contact",
+      "references": "Referințe",
+      "references_comment": "Comentariu",
+      "add_reference": "Adaugă fotografie",
+      "upload_reference": "Încarcă",
+      "delete_reference": "Șterge",
+      "advance_sum": "Suma avansului",
+      "deposit_sum": "Suma garanției"
+    },
+    "placeholders": {
+      "delivery_time": "ex. 14:00"
+    }
+  },
+  "clients": {
+    "clients": "Clienți",
+    "titles": {
+      "list": "Clienți",
+      "show": "Detalii Client",
+      "edit": "Editează Client",
+      "create": "Creează Client"
+    },
+    "fields": {
+      "name": "Nume",
+      "surname": "Prenume",
+      "phone": "Telefon",
+      "email": "Email",
+      "date_of_birth": "Data nașterii",
+      "wedding_date": "Ziua nunții",
+      "children_birthdays": "Zilele de naștere ale copiilor",
+      "profession": "Profesie",
+      "notes": "Comentarii"
+    }
+  },
+  "buttons": {
+    "print": "Imprimă",
+    "save": "Salvează",
+    "cancel": "Anulează",
+    "create": "Creează",
+    "edit": "Editează",
+    "show": "Vizualizează",
+    "delete": "Șterge",
+    "search": "Caută...",
+    "actions": "Acțiuni"
+  },
+  "options": {
+    "event_types": {
+      "Wedding": "Nuntă",
+      "Cumetrie": "Cumetrie",
+      "Birthday": "Zi de Naștere",
+      "Corporate Event": "Eveniment Corporativ",
+      "Other": "Altul"
+    },
+    "cake_shapes": {
+      "Square": "Pătrat",
+      "Round": "Rotund",
+      "Rectangular": "Dreptunghiular",
+      "Triangular": "Triunghiular",
+      "Other models": "Alte modele"
+    },
+    "fillings": {
+      "Alb negru": "Alb negru",
+      "Catifea roșie": "Catifea roșie",
+      "Chichiță de seară": "Chichiță de seară",
+      "De casă": "De casă",
+      "Diplomat": "Diplomat",
+      "Evantai": "Evantai",
+      "Gingășie": "Gingășie",
+      "Lady ananas": "Lady ananas",
+      "Lady vișină": "Lady vișină",
+      "Magie": "Magie",
+      "Nuvella": "Nuvella",
+      "Primăvara": "Primăvara",
+      "Prințul negru": "Prințul negru",
+      "Sârbătoare": "Sârbătoare",
+      "Smântânel": "Smântânel",
+      "Șah-mat": "Șah-mat",
+      "Tiramisu": "Tiramisu",
+      "Tradițional cu nuca": "Tradițional cu nuca",
+      "Tradițional cu vișină": "Tradițional cu vișină",
+      "Fetita de lapte": "Fetița de lapte",
+      "Praga - Catifea roșie": "Praga - Catifea roșie",
+      "Cu morcov": "Cu morcov",
+      "Melancolie": "Melancolie",
+      "Fistic": "Fistic",
+      "Alt continut": "Alt conținut"
+    },
+    "fruit_addons": {
+      "Banana": "Banană",
+      "Cherry": "Cireașă",
+      "Kiwi": "Kiwi",
+      "Pineapple": "Ananas",
+      "Chickpea": "Năut"
+    },
+    "decor_addons": {
+      "Fruit": "Fructe",
+      "Sugar paste": "Pastă de zahăr",
+      "Cream": "Friscă"
+    },
+    "statuses": {
+      "inregistrata": "Inregistrata",
+      "transmisa_catre_producere": "Transmisa catre producere",
+      "preluata_producere": "Preluata producere",
+      "in_lucru": "In lucru",
+      "gata_de_livrare": "Gata de livrare",
+      "depozit_panilino": "Depozit Panilino",
+      "showroom": "Showroom",
+      "preluata_sofer": "Preluata sofer",
+      "livrata": "Livrata",
+      "cancelled": "Anulat"
+    },
+    "stand_types": {
+      "Metal": "Metalică"
+    }
+  }
+}

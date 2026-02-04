@@ -8,8 +8,10 @@ import {
   DeleteButton,
 } from "@refinedev/antd";
 import { Table, Space, Input } from "antd";
+import { useTranslation } from "react-i18next";
 
 export const ClientList: React.FC<IResourceComponentsProps> = () => {
+  const { t } = useTranslation();
   const { tableProps, searchFormProps } = useTable({
     syncWithLocation: true,
     onSearch: (values: any) => {
@@ -27,19 +29,19 @@ export const ClientList: React.FC<IResourceComponentsProps> = () => {
     <List>
       <div style={{ marginBottom: "16px" }}>
         <Input.Search
-          placeholder="Search by name, phone or email"
+          placeholder={t("buttons.search") || "Search..."}
           onSearch={(value) => searchFormProps.onFinish({ q: value })}
           allowClear
         />
       </div>
       <Table {...tableProps} rowKey="id">
         <Table.Column dataIndex="id" title="ID" />
-        <Table.Column dataIndex="name" title="First Name" />
-        <Table.Column dataIndex="surname" title="Last Name" />
-        <Table.Column dataIndex="phone" title="Phone" />
-        <Table.Column dataIndex="email" title="Email" />
+        <Table.Column dataIndex="name" title={t("clients.fields.name")} />
+        <Table.Column dataIndex="surname" title={t("clients.fields.surname")} />
+        <Table.Column dataIndex="phone" title={t("clients.fields.phone")} />
+        <Table.Column dataIndex="email" title={t("clients.fields.email")} />
         <Table.Column
-          title="Actions"
+          title={t("buttons.actions")}
           dataIndex="actions"
           render={(_, record: BaseRecord) => (
             <Space>
